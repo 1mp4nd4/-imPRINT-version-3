@@ -1,0 +1,73 @@
+html {
+   font-family: 'Times New Roman', Times, serif;
+
+}
+
+body {
+   display: grid;
+   grid-template: 
+      "navbar navbar navbar navbar" 20vh
+      "hero hero hero hero" 60vh
+      "cta cta cta cta" 40vh
+      "categories categories categories categories" 60vh
+      "carousel carousel carousel carousel " 39vh
+      "wwith wwith wwith wwith" 40vh
+      "footer footer footer footer" 20vh 
+      / 3fr 3fr 3fr 3fr;
+}
+
+.navbar{
+   grid-area: navbar;
+   border: 1em solid aqua;
+   
+}
+
+.navGrid{
+   display: grid;
+   grid-template: "Logo . Link1 Link2 Link3" 
+               / 3fr 1fr 1fr 1fr;
+ 
+}
+
+.navGrid button{
+   
+}
+}
+
+.navbar .Logo{
+   grid-area: Logo;
+}
+
+
+.heroImage{
+   grid-area: hero;
+   border: 1em solid aqua;
+}
+
+.heroText{
+   grid-area: cta;
+   border: 1em solid aqua;
+}
+
+.categories{
+   grid-area: categories;
+   border: 1em solid aqua;
+}
+
+.carousel{
+   grid-area: carousel;
+   border: 1em solid aqua;
+}
+
+.workedWith{
+   grid-area: wwith;
+   border: 1em solid aqua;
+}
+
+.footer{
+   grid-area: footer;
+   border: 1em solid aqua;
+}
+
+
+
