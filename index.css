@@ -1,20 +1,25 @@
+/* global */
 html {
    font-family: 'Times New Roman', Times, serif;
 
 }
 
+
+/*main grid*/
 body {
    display: grid;
    grid-template: 
-      "navbar navbar navbar navbar" 20vh
-      "hero hero hero hero" 60vh
+      "navbar navbar navbar navbar" 20vh 
+      "hero hero hero hero" 60vh 
       "cta cta cta cta" 40vh
       "categories categories categories categories" 60vh
       "carousel carousel carousel carousel " 39vh
       "wwith wwith wwith wwith" 40vh
       "footer footer footer footer" 20vh 
       / 3fr 3fr 3fr 3fr;
+      
 }
+
 
 .navbar{
    grid-area: navbar;
@@ -22,26 +27,15 @@ body {
    
 }
 
-.navGrid{
-   display: grid;
-   grid-template: "Logo . Link1 Link2 Link3" 
-               / 3fr 1fr 1fr 1fr;
- 
-}
 
-.navGrid button{
-   
+.Logo{
+   width: clamp(50%, 40%, 50%);
+    height:auto;
 }
-}
-
-.navbar .Logo{
-   grid-area: Logo;
-}
-
-
 .heroImage{
    grid-area: hero;
    border: 1em solid aqua;
+   
 }
 
 .heroText{
@@ -70,4 +64,48 @@ body {
 }
 
 
+/*navbar*/
 
+.navGrid{
+   display: grid;
+   grid-template: "Logo Link1 Link2 Link3" 
+               / 3fr 1fr 1fr 1fr;
+  justify-items: flex-start;
+  list-style: none;
+  place-items: center;
+}
+
+.navbar .Logo{
+   grid-area: Logo;
+}
+
+.navGrid button{
+   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+   font-family: Arial, Helvetica, sans-serif;
+   border: none;
+   text-shadow: 0.1em #000;
+   text-align: center;
+}
+
+/*hero*/
+
+.heroImage{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+
+  
+}
+
+.hero{
+   height: 100%;
+   width: auto;
+}
+/*necesita un corte de linea
+
+/* cta & box */
+
+.heroText{
+   background-image: url(https://sweep.ac.uk/wp-content/uploads/blue-banner-900x281.jpg);
+}
