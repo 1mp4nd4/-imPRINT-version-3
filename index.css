@@ -28,7 +28,7 @@ body {
 
 
 .Logo{
-   width: clamp(10vh, 20vh, 10vh);
+   width: clamp(10vh, 20vh, 15vh);
     height:auto;
 }
 .heroImage{
@@ -128,10 +128,10 @@ body {
    border-width: 0.1em;
    border-color:#042fa0;
    padding: 0.5em;
-   font-size: clamp(1rem, 2.5vw, 2rem); 
    font-family: 'Lato';
    font-style: normal;
    font-weight: 300;
+   font-size: 0.65em;
    color: white
 }
 
@@ -144,5 +144,40 @@ body {
 /* cta & box */
 
 .heroText{
-   background-image: url(https://sweep.ac.uk/wp-content/uploads/blue-banner-900x281.jpg);
+  display: grid;
+  grid-template: "left rightTop"
+                 "left rightBot" 
+                 / 3fr 1fr;
+   gap: 1em;
+   justify-content: center;
+   justify-items: center;
+   background-image: url(https://i.ibb.co/n87Lpmr/banner-brown.jpg);
+   background-size: cover;
+   align-items: center;
 }
+/*button style*/
+
+ /*button style*/
+
+.banner{
+   grid-area: left;
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 400;
+   text-align:left;
+   font-size: 1em;
+   color: ivory;
+  
+}
+.ctaTop{
+   grid-area: rightTop;
+   height: 4em;
+   align-items: center;
+}
+
+.ctaBot{
+   grid-area:rightBot;
+   height: 4em;
+}
+
+
