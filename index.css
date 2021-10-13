@@ -155,9 +155,6 @@ body {
    background-size: cover;
    align-items: center;
 }
-/*button style*/
-
- /*button style*/
 
 .banner{
    grid-area: left;
@@ -180,4 +177,32 @@ body {
    height: 4em;
 }
 
+/* categorias de productos */
+.categories{
+   display: grid;
+   grid-template: "boxCategoria aside"
+                  "boxCategoria2 aside"
+                  "boxCategoria3 aside" / 10fr 2fr;
+}
 
+.categories div{
+
+
+
+}
+
+.cat1{
+   grid-area: boxCategoria;
+   background-image: url(https://www.3dprintersonlinestore.com/image/data/News/open-board-game-launches-on-indiegogo-1.jpg);
+}
+
+.cat2{
+   grid-area: boxCategoria2;
+}
+
+.cat3{
+   grid-area: boxCategoria3;
+}
+.categories aside{
+   grid-area: aside;
+}
