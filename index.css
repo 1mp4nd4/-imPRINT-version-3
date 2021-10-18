@@ -81,10 +81,11 @@ body {
 
 .navbar .Logo{
    grid-area: Logo;
+   scale:100%;
 }
 
 .navGrid button{
-   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+   box-shadow: rgba(0, 0, 0, 0.07) 0px 0.1em 0.1em, rgba(0, 0, 0, 0.10) 0px 0.2em 0.2em, rgba(0, 0, 0, 0.07) 0px 0.4em 0.4em, rgba(0, 0, 0, 0.07) 0px 0.8em 0.8em, rgba(0, 0, 0, 0.07) 0px 1.4em 1.4em;
    font-size: clamp(0.7em, 3em, 1em);
    border: none;
    text-shadow: 0.1em #000;
@@ -95,16 +96,22 @@ body {
    font-style: normal;
    font-weight: 500;
    font-display: swap;
-   padding: clamp(0em, 0.1em, 1em)
+   padding: clamp(0em, 0.1em, 1em);
    text-justify: newspaper;
-
+   transition: 0.2s ease-in-out 0s;
 }
+
+.navGrid button:hover{
+   transition: 0.2s;
+   box-shadow: rgba(0, 0, 0, 0.07) 0em 0em 0.2em, rgba(0, 0, 0, 0.07) 0px 0em 0.4em, rgba(0, 0, 0, 0.07) 0px 0em 0.8em, rgba(0, 0, 0, 0.07) 0px 0em 0.16em, rgba(0, 0, 0, 0.07) 0em 0em 2em;
+}
+
 
 
 /*hero*/
 
 .heroImage{
-  
+  margin-top: 10em;
    background-image: url(https://r2w3e3h5.rocketcdn.me/wp-content/uploads/2020/03/printer-3.gif);
    background-size: contain;
    background-clip: none;
@@ -114,92 +121,96 @@ body {
    grid-template: "leftTop centerTop rightTop"
                   "left center right"
                   "leftBot centerBot rightBot" / 1fr 1fr 1fr;
-   align-items: center;               
+   align-items: center;  
+                
 }
 
 .heroImage p{
    grid-area: rightTop;
-   width: 15em;
-   margin-bottom: clamp(4rem, 5rem, 10rem);
+   width: 10em;
+   margin-top: -1em;
    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-   background-color: #466ed4;
+   background-color: rgba(94, 89, 89, 0.10);
    border-radius: 9%;
    border-style: solid;
    border-width: 0.1em;
-   border-color:#042fa0;
    padding: 0.5em;
    font-family: 'Lato';
    font-style: normal;
    font-weight: 300;
-   font-size: 0.65em;
-   color: white
+   font-size: 2em;
+   color: white;
+   text-shadow: 0.1em 0.1em rgba(162,162,162,255);
+   
 }
 
-.hero{
-   height: 100%;
-   width: auto;
-}
-/*necesita un corte de linea
-
-/* cta & box */
-
-.heroText{
-  display: grid;
-  grid-template: "left rightTop"
-                 "left rightBot" 
-                 / 3fr 1fr;
-   gap: 1em;
-   justify-content: center;
-   justify-items: center;
-   background-image: url(https://i.ibb.co/n87Lpmr/banner-brown.jpg);
-   background-size: cover;
-   align-items: center;
+.heroImage span{
+   color: #e85d00;
 }
 
-.heroText p{
-   font-family: 'Source Sans Pro';
-   font-weight: 500;
-   font-style: italic;
-   background-color: rgba(250, 250, 50, 0.20);
+/* Cta buttons and animations */
+.CTA{
+   display: grid;
+   grid-template: "left right"
+                  "left1 right1" 
+                  "left2 right2"/ 6fr 6fr;
+   width: 100vw;
+   align-items:flex-end;
 }
-
-.banner{
-   grid-area: left;
-   font-family: 'Lato';
+.CTA button{
+   background-color: #466ed4;
+   font-family: 'Poppins';
    font-style: normal;
-   font-weight: 400;
-   text-align:left;
-   font-size: 1em;
-   color: ivory;
+   font-weight: 900;
+   font-size: 1.5em;
+   color: white;
+   width: 20em;
+   justify-self: center;
+   border-radius: 9%;
   
 }
-.ctaTop{
-   grid-area: rightTop;
+
+.test{
+   grid-area: center;
+   height: 10em;
+}
+
+.ctaLeft{
+   grid-area: left;
    height: 4em;
    align-items: center;
+   box-shadow: -0.5em 0.5em rgba(162,162,162,255);
 }
 
-.ctaBot{
-   grid-area:rightBot;
+.ctaRight{
+   grid-area: right;
    height: 4em;
+   box-shadow: 0.5em 0.5em rgba(162,162,162,255);
 }
 
-
-.cat1{
-   grid-area: boxCategoria;
-   background-image: url(https://3dprintingindustry.com/wp-content/uploads/2016/02/3dprintchess.jpg);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   border: transparent 1em rgba(50, 50, 50, 0.20);
-   outline: 0.5em solid rgba(250, 250, 0, 0.07);
-   border-radius: 5%;
+.ctaRight:hover{
+   transition: 0.5s;
+   box-shadow: 1em 1em rgba(162,162,162,255);
+   transform: translateY(-6px)
+   
 }
 
-.cat2{
-   grid-area: boxCategoria2;
+.ctaRight:hover::after{
+   transition: 0.5s;
+   transform: translateY(6px);
+   box-shadow: 0.5em 0.5em rgba(162,162,162,255);
 }
 
-.cat3{
-   grid-area: boxCategoria3;
+.ctaLeft:hover{
+   transition: 0.5s;
+   box-shadow: -1em 1em rgba(162,162,162,255);
+   transform: translateY(-6px)
+   
 }
+
+.ctaLeft:hover::after{
+   transition: 0.5s;
+   transform: translateY(6px);
+   box-shadow: 0.5em 0.5em rgba(162,162,162,255);
+}
+
