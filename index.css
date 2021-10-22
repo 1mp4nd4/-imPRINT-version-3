@@ -12,11 +12,12 @@ body {
       "navbar navbar navbar navbar" 15vh 
       "hero hero hero hero" 60vh 
       "cta cta cta cta" 20vh
-      "categories categories categories categories" 20vh
-      "carousel carousel carousel carousel " 39vh
+      "carousel carousel carousel carousel " 60vh
       "wwith wwith wwith wwith" 40vh
       "footer footer footer footer" 20vh 
       / 3fr 3fr 3fr 3fr;
+
+      
       
 }
 
@@ -42,10 +43,6 @@ body {
    
 }
 
-.categories{
-   grid-area: categories;
-   
-}
 
 .Carousel{
    grid-area: carousel;
@@ -213,28 +210,42 @@ body {
 .Carousel{
    display: grid;
    grid-template: "left center right" / 3fr 3fr 3fr;
-   list-style: none;
-}
-
-.carouselImage1{
-   grid-area: left;
-   border-radius: 50%;
-   background-color:darkcyan;
-   scale:70%;
-}
-
-
-.carouselImage2{
-   grid-area: center;
-   border-radius: 50%;
-   background-color:darkcyan;
+   scale:80%;
+   
    
 }
 
+.Carousel img{
+   scale:70%;
+   border-radius: 50%;
+   border-style: solid;
+   border-color: #4e5458;
+   height: 100%;
+}
+.carouselImage1{
+   grid-area: left;
+   opacity: 50%;
+   
+}
+
+.carouselImage2{
+   grid-area: center;
+   transition: 0.5s;
+   z-index: 2;
+ 
+}
+
+.carouselImage2 img{
+   scale:100%;
+   
+}
+
+.carouselImage2:hover{
+   transition: 0.5s;
+   transform: translateY(-12px);
+}
 
 .carouselImage3{
    grid-area: right;
-   border-radius: 50%;
-   background-color:darkcyan;
-   scale:70%;
+   opacity: 50%;
 }
