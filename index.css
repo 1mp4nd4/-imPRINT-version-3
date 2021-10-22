@@ -11,8 +11,8 @@ body {
    grid-template: 
       "navbar navbar navbar navbar" 15vh 
       "hero hero hero hero" 60vh 
-      "cta cta cta cta" 40vh
-      "categories categories categories categories" 60vh
+      "cta cta cta cta" 20vh
+      "categories categories categories categories" 20vh
       "carousel carousel carousel carousel " 39vh
       "wwith wwith wwith wwith" 40vh
       "footer footer footer footer" 20vh 
@@ -47,7 +47,7 @@ body {
    
 }
 
-.carousel{
+.Carousel{
    grid-area: carousel;
    
 }
@@ -176,6 +176,7 @@ body {
 }
 
 .ctaLeft{
+   transition: 0.5s;
    grid-area: left;
    height: 4em;
    align-items: center;
@@ -183,6 +184,7 @@ body {
 }
 
 .ctaRight{
+   transition: 0.5s;
    grid-area: right;
    height: 4em;
    box-shadow: 0.5em 0.5em rgba(162,162,162,255);
@@ -195,11 +197,7 @@ body {
    
 }
 
-.ctaRight:hover::after{
-   transition: 0.5s;
-   transform: translateY(6px);
-   box-shadow: 0.5em 0.5em rgba(162,162,162,255);
-}
+
 
 .ctaLeft:hover{
    transition: 0.5s;
@@ -208,9 +206,35 @@ body {
    
 }
 
-.ctaLeft:hover::after{
-   transition: 0.5s;
-   transform: translateY(6px);
-   box-shadow: 0.5em 0.5em rgba(162,162,162,255);
+
+/* carousel */
+
+
+.Carousel{
+   display: grid;
+   grid-template: "left center right" / 3fr 3fr 3fr;
+   list-style: none;
 }
 
+.carouselImage1{
+   grid-area: left;
+   border-radius: 50%;
+   background-color:darkcyan;
+   scale:70%;
+}
+
+
+.carouselImage2{
+   grid-area: center;
+   border-radius: 50%;
+   background-color:darkcyan;
+   
+}
+
+
+.carouselImage3{
+   grid-area: right;
+   border-radius: 50%;
+   background-color:darkcyan;
+   scale:70%;
+}
