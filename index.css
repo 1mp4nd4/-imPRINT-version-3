@@ -9,16 +9,13 @@ html {
 body {
    display: grid;
    grid-template: 
-      "navbar navbar navbar navbar" 15vh 
-      "hero hero hero hero" 60vh 
+      "navbar navbar navbar navbar" 15vh
+      "focus focus focus focus" 60vh 
       "cta cta cta cta" 20vh
-      "carousel carousel carousel carousel " 60vh
-      "wwith wwith wwith wwith" 40vh
-      "footer footer footer footer" 20vh 
+      "intro intro intro intro" 40vh
+      "wwith wwith wwith wwith" 80vh
+      "footer footer footer footer" 10vh 
       / 3fr 3fr 3fr 3fr;
-
-      
-      
 }
 
 
@@ -33,9 +30,13 @@ body {
     height:auto;
 }
 .heroImage{
-   grid-area: hero;
+   grid-area: focus;
   
    
+}
+
+.intro{
+   grid-area: intro;
 }
 
 .heroText{
@@ -45,7 +46,7 @@ body {
 
 
 .Carousel{
-   grid-area: carousel;
+   grid-area: focus;
    
 }
 
@@ -65,6 +66,11 @@ body {
    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
+.navbar .Logo{
+   grid-area: Logo;
+   scale:100%;
+}
+
 .navGrid{
    width:auto;
    display: grid;
@@ -74,11 +80,6 @@ body {
    list-style: none;
    place-items: center;
    gap: 0.5em;
-}
-
-.navbar .Logo{
-   grid-area: Logo;
-   scale:100%;
 }
 
 .navGrid button{
@@ -203,28 +204,78 @@ body {
    
 }
 
+/* Worked with */
 
+.workedWith{
+   display: grid;
+   height: 100%;
+   place-content: center;
+
+}
+
+.workedWith p{
+   
+   width: 10em;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   background-color: rgba(94, 89, 89, 0.10);
+   border-radius: 9%;
+   border-style: solid;
+   border-width: 0.1em;
+   padding: 0.5em;
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 300;
+   font-size: 1em;
+   color: white;
+   text-shadow: 0.1em 0.1em rgba(162,162,162,255);
+}
+
+.workedWithImg{
+   width: auto;
+}
+/*footer*/
+.footer{
+   justify-self: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 66%;
+   border-bottom: 0.1em black solid;
+}
+.footer ul{
+   gap: 1em;
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.footer img{
+   width: 10vh;
+}
 /* carousel */
 
 
 .Carousel{
    display: grid;
-   grid-template: "left center right" / 3fr 3fr 3fr;
-   scale:80%;
-   
-   
+   grid-template: "right center left" / 5fr 1fr 5fr;
+   height: 30vh;
+   overflow: visible;
+   transition: 0.5s;
+   list-style: none;
 }
 
 .Carousel img{
-   scale:70%;
+   height: 30vh;
    border-radius: 50%;
    border-style: solid;
    border-color: #4e5458;
-   height: 100%;
+   
 }
 .carouselImage1{
-   grid-area: left;
+   grid-area: right;
    opacity: 50%;
+   justify-self: flex-end;
    
 }
 
@@ -232,12 +283,10 @@ body {
    grid-area: center;
    transition: 0.5s;
    z-index: 2;
- 
-}
-
-.carouselImage2 img{
-   scale:100%;
-   
+   height: 20vh;
+   justify-self: center;
+   min-width: 0; 
+   min-height: 0;
 }
 
 .carouselImage2:hover{
@@ -246,6 +295,9 @@ body {
 }
 
 .carouselImage3{
-   grid-area: right;
+   grid-area:left;
    opacity: 50%;
+   justify-self: flex-start;
 }
+
+/* carousel */
