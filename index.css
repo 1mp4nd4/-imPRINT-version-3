@@ -10,7 +10,7 @@ body {
    display: grid;
    grid-template: 
       "navbar navbar navbar navbar" 15vh
-      "focus focus focus focus" 60vh 
+      "focus focus focus focus" 80vh 
       "cta cta cta cta" 20vh
       "intro intro intro intro" 40vh
       "wwith wwith wwith wwith" 80vh
@@ -66,7 +66,11 @@ body {
    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
-.navbar .Logo{
+.logoWrap{
+   display:flex;
+   justify-self: flex-start;
+}
+.Logo img{
    grid-area: Logo;
    scale:100%;
 }
@@ -74,13 +78,12 @@ body {
 .navGrid{
    width:auto;
    display: grid;
-   grid-template: "Logo Link1 Link2 Link3" 
-               / 3fr 1fr 1fr 1fr;
-   justify-items: flex-start;
+   grid-template: "Logo Sandwich" 
+               / 6fr 6fr;
+   justify-items: center;
    list-style: none;
    place-items: center;
    gap: 0.5em;
-   
 }
 
 .navGrid button{
@@ -105,14 +108,14 @@ body {
    box-shadow: rgba(0, 0, 0, 0.07) 0em 0em 0.2em, rgba(0, 0, 0, 0.07) 0px 0em 0.4em, rgba(0, 0, 0, 0.07) 0px 0em 0.8em, rgba(0, 0, 0, 0.07) 0px 0em 0.16em, rgba(0, 0, 0, 0.07) 0em 0em 2em;
 }
 
-
+/* /navbar */
 
 /*hero*/
-
+/*query needed for size */
 .heroImage{
-  margin-top: 10em;
+   padding-top: clamp(5em, 20vw, 10em);
    background-image: url(https://r2w3e3h5.rocketcdn.me/wp-content/uploads/2020/03/printer-3.gif);
-   background-size: contain;
+   background-size: 70%;
    background-clip: none;
    background-position: center;
    background-repeat: no-repeat;
@@ -123,10 +126,10 @@ body {
    align-items: center;  
                 
 }
-
+/* query needed for position */
 .heroImage p{
    grid-area: rightTop;
-   width: 10em;
+   width: clamp(8em, 20vw, 10em);
    margin-top: -1em;
    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
    background-color: rgba(94, 89, 89, 0.10);
@@ -137,7 +140,7 @@ body {
    font-family: 'Lato';
    font-style: normal;
    font-weight: 300;
-   font-size: 2em;
+   font-size: clamp(0.8rem, 2vw, 2rem);
    color: white;
    text-shadow: 0.1em 0.1em rgba(162,162,162,255);
    
@@ -147,7 +150,7 @@ body {
    color: #e85d00;
 }
 
-/* hero */
+/* /hero */
 
 /*intro(why should you use 3d)*/
 
@@ -158,7 +161,6 @@ body {
    background-color: rgba(94, 89, 89, 0.10);
    
 }
-
 .porque{
    grid-area: top0;
    align-self: flex-start;
@@ -168,34 +170,28 @@ body {
    font-family: 'Lato';
    font-style: normal;
    font-weight: 300;
-   font-size: 2em;
+   font-size: clamp(1rem, 2.5vw, 2rem);   
    color: white;
    text-shadow: 0.1em 0.1em rgba(162,162,162,255);
 }
-
 .intro i{
    scale:400%;
 }
-
 .intro{
    font-family: 'lato';
    font-style: normal;
    font-weight: 900;
 }
-
 .introInnovation{
    grid-area: top0;
    display: grid;
    place-items: center;
 }
-
 .introPinnovation{
    grid-area: bot0;
    display: grid;
    place-items: center;
 }
-
-
 .introEffectivity{
    grid-area: top1;
    display: grid;
@@ -203,7 +199,6 @@ body {
    background-color: rgba(94, 89, 89, 0.404);
    margin: 0em 0em 0em 0em;
 }
-
 .introPeffectivity{
    grid-area: bot1;
    display: grid;
@@ -211,24 +206,17 @@ body {
    background-color: rgba(94, 89, 89, 0.404);
    margin: 0em 0em 0em 0em;
 }
-
 .introCost{
    grid-area:top2;
    display: grid;
    place-items: center;
 }
-
 .introPcost{
    grid-area:bot2;
    display: grid;
    place-items: center;
 }
-
-
-
-
-
-
+/* /intro */
 
 /* Cta buttons and animations */
 .CTA{
@@ -244,43 +232,33 @@ body {
    font-family: 'Poppins';
    font-style: normal;
    font-weight: 900;
-   font-size: 1.5em;
+   font-size: clamp(0.5em, 5vw, 1.5em);
    color: white;
    width: 20em;
    justify-self: center;
    border-radius: 9%;
   
 }
-
-.test{
-   grid-area: center;
-   height: 10em;
-}
-
+/* media query needed */
 .ctaLeft{
    transition: 0.5s;
    grid-area: left;
-   height: 4em;
+   height: clamp(1em, 40vh, 4em);
    align-items: center;
    box-shadow: -0.5em 0.5em rgba(162,162,162,255);
 }
-
 .ctaRight{
    transition: 0.5s;
    grid-area: right;
    height: 4em;
    box-shadow: 0.5em 0.5em rgba(162,162,162,255);
 }
-
 .ctaRight:hover{
    transition: 0.5s;
    box-shadow: 1em 1em rgba(162,162,162,255);
    transform: translateY(-6px)
    
 }
-
-
-
 .ctaLeft:hover{
    transition: 0.5s;
    box-shadow: -1em 1em rgba(162,162,162,255);
@@ -289,17 +267,15 @@ body {
 }
 
 /* Worked with */
-
 .workedWith{
    display: grid;
    height: 100%;
    place-content: center;
 
 }
-
 .workedWith p{
    
-   width: 10em;
+   width: clamp(8em, 20vw, 10em); ;
    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
    background-color: rgba(94, 89, 89, 0.10);
    border-radius: 9%;
@@ -309,37 +285,38 @@ body {
    font-family: 'Lato';
    font-style: normal;
    font-weight: 300;
-   font-size: 1em;
+   font-size:clamp(0.5rem, 2vw, 1rem); 
    color: white;
    text-shadow: 0.1em 0.1em rgba(162,162,162,255);
 }
-
 .workedWithImg{
-   width: auto;
+   width: clamp(60vw, 700px, 80vw); 
 }
+
 /*footer*/
 .footer{
    justify-self: center;
    display: flex;
    justify-content: space-between;
    align-items: center;
-   width: 66%;
+   width: 66vw; /* media query needed */
    border-bottom: 0.1em black solid;
 }
 .footer ul{
-   gap: 1em;
+   gap: min(0.5em, 1em);
    list-style: none;
    display: flex;
    justify-content: space-between;
    align-items: center;
 }
-
+.footer li{
+   font-size: clamp(0.8rem, 2vw, 1rem);  
+}
 .footer img{
    width: 10vh;
 }
+
 /* carousel */
-
-
 .Carousel{
    display: grid;
    grid-template: "right center left" / 5fr 1fr 5fr;
@@ -348,7 +325,6 @@ body {
    transition: 0.5s;
    list-style: none;
 }
-
 .Carousel img{
    height: 30vh;
    border-radius: 50%;
@@ -362,7 +338,6 @@ body {
    justify-self: flex-end;
    
 }
-
 .carouselImage2{
    grid-area: center;
    transition: 0.5s;
@@ -372,16 +347,38 @@ body {
    min-width: 0; 
    min-height: 0;
 }
-
 .carouselImage2:hover{
    transition: 0.5s;
    transform: translateY(-12px);
 }
-
 .carouselImage3{
    grid-area:left;
    opacity: 50%;
    justify-self: flex-start;
 }
-
 /* carousel */
+
+
+/*query*/
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+
+/* Styles */
+
+/*navbar*/
+.navGrid{
+   width:auto;
+   display: grid;
+   grid-template: "Logo Link1 Link2 Link3" 
+               / 3fr 1fr 1fr 1fr;
+   justify-items: flex-start;
+   list-style: none;
+   place-items: center;
+   gap: 0.5em;
+ 
+   
+}
+
+}
