@@ -9,10 +9,10 @@ html {
 body {
    display: grid;
    grid-template: 
-      "navbar navbar navbar navbar" 15vh
-      "focus focus focus focus" 80vh 
+      "navbar navbar navbar navbar" 30vh
+      "focus focus focus focus" 60vh 
       "cta cta cta cta" 20vh
-      "intro intro intro intro" 40vh
+      "intro intro intro intro" 50vh
       "wwith wwith wwith wwith" 80vh
       "footer footer footer footer" 10vh 
       / 3fr 3fr 3fr 3fr;
@@ -24,11 +24,6 @@ body {
    
 }
 
-
-.Logo{
-   width: clamp(10vh, 20vh, 15vh);
-    height:auto;
-}
 .heroImage{
    grid-area: focus;
   
@@ -62,50 +57,55 @@ body {
 
 
 /*navbar*/
-.navbar{
+
+.navLinks{
    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+   width:100vw;
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: column;
+   list-style: none;
+   place-items: center;
+   gap: 0.5em;
+   padding-left: 0em;
+   
 }
 
-.logoWrap{
-   display:flex;
-   justify-self: flex-start;
-}
+
 .Logo img{
    grid-area: Logo;
    scale:100%;
 }
 
-.navGrid{
-   width:auto;
-   display: grid;
-   grid-template: "Logo Sandwich" 
-               / 6fr 6fr;
-   justify-items: center;
-   list-style: none;
-   place-items: center;
-   gap: 0.5em;
+.Logo{
+   width: clamp(10vh, 20vh, 15vh);
+   height:auto;
 }
 
-.navGrid button{
+.navbar button{
    box-shadow: rgba(0, 0, 0, 0.07) 0px 0.1em 0.1em, rgba(0, 0, 0, 0.10) 0px 0.2em 0.2em, rgba(0, 0, 0, 0.07) 0px 0.4em 0.4em, rgba(0, 0, 0, 0.07) 0px 0.8em 0.8em, rgba(0, 0, 0, 0.07) 0px 1.4em 1.4em;
-   font-size: clamp(0.7em, 3em, 1em);
+   font-size: 0.7em;
    border: none;
    text-shadow: 0.1em #000;
    text-align: center;
-   height: clamp(2em, 4em, 5em);
-   width: clamp(4em, 7em, 9em);
+   height: 1fr;
+   width: 80vw;
    font-family: 'Source Sans Pro';
    font-style: normal;
    font-weight: 500;
-   font-display: swap;
-   padding: clamp(0em, 0.1em, 1em);
    text-justify: newspaper;
+   cursor: pointer;
    transition: 0.2s ease-in-out 0s;
 }
 
-.navGrid button:hover{
+.navbar button:hover{
    transition: 0.2s;
    box-shadow: rgba(0, 0, 0, 0.07) 0em 0em 0.2em, rgba(0, 0, 0, 0.07) 0px 0em 0.4em, rgba(0, 0, 0, 0.07) 0px 0em 0.8em, rgba(0, 0, 0, 0.07) 0px 0em 0.16em, rgba(0, 0, 0, 0.07) 0em 0em 2em;
+}
+
+.navbar ul li a{
+   display:block;
+   width: 100%;
 }
 
 /* /navbar */
@@ -113,24 +113,24 @@ body {
 /*hero*/
 /*query needed for size */
 .heroImage{
-   padding-top: clamp(5em, 20vw, 10em);
+   padding-top: min(5vh, 15vh);
    background-image: url(https://r2w3e3h5.rocketcdn.me/wp-content/uploads/2020/03/printer-3.gif);
-   background-size: 70%;
+   background-size: 120%;
    background-clip: none;
    background-position: center;
    background-repeat: no-repeat;
    display: grid;
    grid-template: "leftTop centerTop rightTop"
                   "left center right"
-                  "leftBot centerBot rightBot" / 1fr 1fr 1fr;
+                / 1fr 1fr 1fr;
    align-items: center;  
                 
 }
 /* query needed for position */
 .heroImage p{
-   grid-area: rightTop;
+   grid-area: leftTop;
    width: clamp(8em, 20vw, 10em);
-   margin-top: -1em;
+   margin-top: em;
    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
    background-color: rgba(94, 89, 89, 0.10);
    border-radius: 9%;
@@ -143,7 +143,7 @@ body {
    font-size: clamp(0.8rem, 2vw, 2rem);
    color: white;
    text-shadow: 0.1em 0.1em rgba(162,162,162,255);
-   
+   align-self: flex-start;
 }
 
 .heroImage span{
@@ -156,26 +156,37 @@ body {
 
 .intro{
    display: grid;
-   grid-template: "top0 top1 top2"
-                  "bot0 bot1 bot2" / 4fr 4fr 4fr ;
+   grid-template: "porque"
+                  "top0"
+                  "bot0"
+                  "top1"
+                  "bot1"
+                  "top2"
+                  "bot2"
+                    ;
    background-color: rgba(94, 89, 89, 0.10);
-   
+   margin-top: 2em;
+  
 }
 .porque{
-   grid-area: top0;
+   grid-area: porque;
    align-self: flex-start;
-   width: 10em;
-   margin-top: -0.1em;
-   padding: 0.5em;
    font-family: 'Lato';
    font-style: normal;
    font-weight: 300;
    font-size: clamp(1rem, 2.5vw, 2rem);   
    color: white;
    text-shadow: 0.1em 0.1em rgba(162,162,162,255);
+   height: 100%;
+   background-color:initial;
+   margin: 0em 0em 0em 0em;
+}
+
+.porque span{ 
+   color: #e85d00; 
 }
 .intro i{
-   scale:400%;
+   scale:200%;
 }
 .intro{
    font-family: 'lato';
@@ -186,11 +197,13 @@ body {
    grid-area: top0;
    display: grid;
    place-items: center;
+   margin: 0em 0em 0em 0em;
 }
 .introPinnovation{
    grid-area: bot0;
    display: grid;
    place-items: center;
+   margin: 0em 0em 0em 0em;
 }
 .introEffectivity{
    grid-area: top1;
@@ -210,22 +223,24 @@ body {
    grid-area:top2;
    display: grid;
    place-items: center;
+   margin: 0em 0em 0em 0em;
 }
 .introPcost{
    grid-area:bot2;
    display: grid;
    place-items: center;
+   margin: 0em 0em 0em 0em;
 }
 /* /intro */
 
 /* Cta buttons and animations */
 .CTA{
+   
    display: grid;
-   grid-template: "left right"
-                  "left1 right1" 
-                  "left2 right2"/ 6fr 6fr;
+   grid-template: "left"
+                  "right" / 12fr;
    width: 100vw;
-   align-items:flex-end;
+   align-items:center;
 }
 .CTA button{
    background-color: #466ed4;
@@ -245,29 +260,27 @@ body {
    grid-area: left;
    height: clamp(1em, 40vh, 4em);
    align-items: center;
-   box-shadow: -0.5em 0.5em rgba(162,162,162,255);
+   
 }
 .ctaRight{
    transition: 0.5s;
    grid-area: right;
    height: 4em;
-   box-shadow: 0.5em 0.5em rgba(162,162,162,255);
+   
 }
 .ctaRight:hover{
    transition: 0.5s;
-   box-shadow: 1em 1em rgba(162,162,162,255);
    transform: translateY(-6px)
    
 }
 .ctaLeft:hover{
    transition: 0.5s;
-   box-shadow: -1em 1em rgba(162,162,162,255);
    transform: translateY(-6px)
    
 }
 
 /* Worked with */
-.workedWith{
+  .workedWith{
    display: grid;
    height: 100%;
    place-content: center;
@@ -358,27 +371,432 @@ body {
 }
 /* carousel */
 
+/* Founders */
+
+.Founders{
+   grid-area: focus;
+   display: grid;
+   grid-template: "ceo text" 40vh
+                  "vice text2" 40vh
+                  / 2fr 9fr;
+   gap: 1em;
+   place-items: center;
+   padding: 2em;
+}
+.Founders img{
+   margin-left: -2em;
+}
+.Founders h3{
+   font-family: 'Source Sans Pro';
+   font-style: normal;
+   font-weight: 900;
+   font-display: swap;
+   text-justify: newspaper;
+   
+}
+.Founders p{
+   border-radius: 9%;
+   border-style: solid;
+   border-width: 0.1em;
+   padding: 0.5em;
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 300;
+   font-size: clamp(0.8rem, 2vw, 2rem);
+   color: white;
+   text-shadow: 0.1em 0.1em rgba(162,162,162,255);
+}
+
+.Ceo{
+   grid-area: ceo;
+   width: 40vw;
+   border-radius: 50%;
+   overflow-y: scroll;
+
+}
+.text1{
+   grid-area: text;
+}
+.Vice{
+   grid-area: vice;
+   width: 40vw;
+   border-radius: 50%;
+}
+.text2{
+   grid-area: text2;
+}
+
+.Location{
+   grid-area: intro;
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: column;
+   place-items: center;
+}
+
+.Location p{
+   border-radius: 9%;
+   border-style: solid;
+   border-width: 0.1em;
+   padding: 0.5em;
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 300;
+   font-size: clamp(0.8rem, 2vw, 2rem);
+   color: white;
+   text-shadow: 0.1em 0.1em rgba(162,162,162,255);
+}
+
+.Location h3{
+   font-family: 'Source Sans Pro';
+   font-style: normal;
+   font-weight: 900;
+   font-display: swap;
+   text-justify: newspaper;
+   
+}
+.City{
+   margin-top: 10em;
+   width: 80vw;
+   border-radius: 50%;
+}
+.text3{
+   grid-area: text;
+   grid-area: text3;
+   margin-left: 0em;    
+}
+/* about */
+
+/* huella de carbono */
+.Caso{
+   margin-top: 5em;
+   display: flex;
+   flex-direction: column;
+   font-family: 'Source Sans Pro';
+   place-items: center;
+   width:100vw;
+   }
+.Caso img{
+   height:60vw;
+   width: 60vw;
+   border-radius: 50%;
+}
+.Caso h4{
+   font-size: 80%;
+   margin: 1em;
+
+}
+
+.Caso p{
+      
+   width: clamp(8em, 20vw, 10em); ;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   background-color: rgba(94, 89, 89, 0.10);
+   border-radius: 9%;
+   border-style: solid;
+   border-width: 0.1em;
+   padding: 0.5em;
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 300;
+   font-size: 80%;
+   color: white;
+   text-shadow: 0.1em 0.1em rgba(162,162,162,255);
+
+}
 
 /*query*/
 
+/* Tablets ----------- */
+@media only screen 
+and (min-device-width : 768px)
+and (max-device-width: 999px) {
+   
+   body {
+      display: grid;
+      grid-template: 
+         "navbar navbar navbar navbar" 15vh
+         "focus focus focus focus" 80vh 
+         "cta cta cta cta" 20vh
+         "intro intro intro intro" 40vh
+         "wwith wwith wwith wwith" 80vh
+         "footer footer footer footer" 10vh 
+         / 3fr 3fr 3fr 3fr;
+   }
+
+   /*navbar*/
+.navLinks{
+   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+   width:auto;
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: row;
+   list-style: none;
+   place-items: center;
+   gap: 0.5em;
+   
+}
+.Logo img{
+   scale:100%;
+}
+
+.navbar button{
+   box-shadow: rgba(0, 0, 0, 0.07) 0px 0.1em 0.1em, rgba(0, 0, 0, 0.10) 0px 0.2em 0.2em, rgba(0, 0, 0, 0.07) 0px 0.4em 0.4em, rgba(0, 0, 0, 0.07) 0px 0.8em 0.8em, rgba(0, 0, 0, 0.07) 0px 1.4em 1.4em;
+   font-size: clamp(0.7em, 3em, 1em);
+   border: none;
+   text-shadow: 0.1em #000;
+   text-align: center;
+   height: clamp(2em, 4em, 5em);
+   width: clamp(4em, 7em, 9em);
+   font-family: 'Source Sans Pro';
+   font-style: normal;
+   font-weight: 500;
+   font-display: swap;
+   padding: clamp(0em, 0.1em, 1em);
+   transition: 0.2s ease-in-out 0s;
+}
+/* /navbar */
+
+/* cta */
+
+.CTA button{
+   width: 10em;
+}
+.CTA{
+   margin-top: 0em;
+   display: grid;
+   grid-template: "left right"
+                  "left1 right1" 
+                  "left2 right2"/ 6fr 6fr;
+   align-items:flex-end;
+}
+.ctaLeft{
+   transition: 0.5s;
+   grid-area: left;
+   height: clamp(1em, 40vh, 4em);
+   align-items: center;
+   box-shadow: -0.5em 0.5em rgba(162,162,162,255);
+}
+.ctaRight{
+   transition: 0.5s;
+   grid-area: right;
+   height: 4em;
+   box-shadow: 0.5em 0.5em rgba(162,162,162,255);
+}
+.ctaRight:hover{
+   transition: 0.5s;
+   box-shadow: 1em 1em rgba(162,162,162,255);
+   transform: translateY(-6px)
+   
+}
+.ctaLeft:hover{
+   transition: 0.5s;
+   box-shadow: -1em 1em rgba(162,162,162,255);
+   transform: translateY(-6px)
+   
+}
+/* /cta */
+
+
+
+}
+
+
 /* Desktops and laptops ----------- */
 @media only screen 
-and (min-width : 1224px) {
+and (min-width : 1000px) {
 
 /* Styles */
 
 /*navbar*/
-.navGrid{
+.navLinks{
+   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
    width:auto;
-   display: grid;
-   grid-template: "Logo Link1 Link2 Link3" 
-               / 3fr 1fr 1fr 1fr;
-   justify-items: flex-start;
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: row;
    list-style: none;
    place-items: center;
    gap: 0.5em;
- 
+   
+}
+.Logo img{
+   scale:100%;
+}
+
+.navbar button{
+   box-shadow: rgba(0, 0, 0, 0.07) 0px 0.1em 0.1em, rgba(0, 0, 0, 0.10) 0px 0.2em 0.2em, rgba(0, 0, 0, 0.07) 0px 0.4em 0.4em, rgba(0, 0, 0, 0.07) 0px 0.8em 0.8em, rgba(0, 0, 0, 0.07) 0px 1.4em 1.4em;
+   font-size: clamp(0.7em, 3em, 1em);
+   border: none;
+   text-shadow: 0.1em #000;
+   text-align: center;
+   height: clamp(2em, 4em, 5em);
+   width: clamp(4em, 7em, 9em);
+   font-family: 'Source Sans Pro';
+   font-style: normal;
+   font-weight: 500;
+   font-display: swap;
+   padding: clamp(0em, 0.1em, 1em);
+   text-justify: newspaper;
+   transition: 0.2s ease-in-out 0s;
+}
+/* focus */
+body {
+   display: grid;
+   grid-template: 
+      "navbar navbar navbar navbar" 30vh
+      "focus focus focus focus" 80vh 
+      "cta cta cta cta" 20vh
+      "intro intro intro intro" 40vh
+      "wwith wwith wwith wwith" 80vh
+      "footer footer footer footer" 10vh 
+      / 3fr 3fr 3fr 3fr;
+}
+.heroImage{
+   background-size: 70%;     
+}
+
+.heroImage p{
+   grid-area: rightTop;
+   align-self:flex-start;
+}
+
+/* cta */
+
+.CTA{
+   margin-top: 0em;
+   display: grid;
+   grid-template: "left right"
+                  "left1 right1" 
+                  "left2 right2"/ 6fr 6fr;
+   width: 100vw;
+   align-items:flex-end;
+}
+.ctaLeft{
+   transition: 0.5s;
+   grid-area: left;
+   height: clamp(1em, 40vh, 4em);
+   align-items: center;
+   box-shadow: -0.5em 0.5em rgba(162,162,162,255);
+}
+.ctaRight{
+   transition: 0.5s;
+   grid-area: right;
+   height: 4em;
+   box-shadow: 0.5em 0.5em rgba(162,162,162,255);
+}
+.ctaRight:hover{
+   transition: 0.5s;
+   box-shadow: 1em 1em rgba(162,162,162,255);
+   transform: translateY(-6px)
+   
+}
+.ctaLeft:hover{
+   transition: 0.5s;
+   box-shadow: -1em 1em rgba(162,162,162,255);
+   transform: translateY(-6px)
    
 }
 
+/* intro */
+.intro{
+   display: grid;
+   grid-template: "top0 top1 top2"
+                  "bot0 bot1 bot2" / 4fr 4fr 4fr ;
+   background-color: rgba(94, 89, 89, 0.10);
+}
+
+.porque{
+   grid-area: top0;
+   align-self: flex-start;
+   width: 10em;
+   margin-top: -0.1em;
+   padding: 0.5em;
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 300;
+   font-size: clamp(1rem, 2.5vw, 2rem);   
+   color: white;
+   text-shadow: 0.1em 0.1em rgba(162,162,162,255);
+}
+.intro i{
+   scale:400%;
+}
+.intro{
+   font-family: 'lato';
+   font-style: normal;
+   font-weight: 900;
+}
+.introInnovation{
+   grid-area: top0;
+   display: grid;
+   place-items: center;
+}
+.introPinnovation{
+   grid-area: bot0;
+   display: grid;
+   place-items: center;
+}
+.introEffectivity{
+   grid-area: top1;
+   display: grid;
+   place-items: center;
+   background-color: rgba(94, 89, 89, 0.404);
+   margin: 0em 0em 0em 0em;
+}
+.introPeffectivity{
+   grid-area: bot1;
+   display: grid;
+   place-items: center;
+   background-color: rgba(94, 89, 89, 0.404);
+   margin: 0em 0em 0em 0em;
+}
+.introCost{
+   grid-area:top2;
+   display: grid;
+   place-items: center;
+}
+.introPcost{
+   grid-area:bot2;
+   display: grid;
+   place-items: center;
+}
+
+/* about */
+
+.Ceo{
+   width: 25vw;
+}
+
+.Vice{
+   margin-top: 20em;
+   justify-self:left;
+   width: 25vw;
+   grid-column-start: 2;
+   
+}
+
+.text2{
+   justify-self: flex-end;
+   scale: 80%;
+}
+
+.Location{
+   margin-top: 20em;
+}
+.City{
+   margin-top: 40em;
+   width: 35vw;
+   border-radius: 30%;
+   max-width: 100%;
+}
+/* /about */
+
+/* foot print */
+
+.Caso img{
+   height:30vw;
+   width: 30vw;
+   margin-top: -4em;
+}
 }
