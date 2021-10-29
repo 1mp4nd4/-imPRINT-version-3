@@ -1,7 +1,8 @@
 /* global */
+
 html {
    font-family: 'Times New Roman', Times, serif;
-
+  
 }
 
 
@@ -21,6 +22,7 @@ body {
 
 .navbar{
    grid-area: navbar;
+   width:100vw;
    
 }
 
@@ -60,7 +62,7 @@ body {
 
 .navLinks{
    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-   width:100vw;
+   width:100%;
    display: flex;
    justify-content: space-evenly;
    flex-direction: column;
@@ -491,8 +493,7 @@ body {
 }
 
 .Caso p{
-      
-   width: clamp(8em, 20vw, 10em); ;
+   width: clamp(8em, 20vw, 10em); 
    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
    background-color: rgba(94, 89, 89, 0.10);
    border-radius: 9%;
@@ -507,7 +508,64 @@ body {
    text-shadow: 0.1em 0.1em rgba(162,162,162,255);
 
 }
+/* /huella de carbono */
 
+/* formulario */
+
+.formBody{
+   padding: 5em 5em 5em 5em;
+   display: flex;
+   place-content: center;
+   background-color:rgba(94, 89, 89, 0.651);
+   height: 100vh;
+   width: 100vw;
+ 
+}
+
+form{
+   display: flex;
+   flex-direction: column;
+   width:25;
+   justify-content:center;
+   background-color: rgba(94, 89, 89, 0.10);
+   border-radius: 9%;
+   border-style: solid;
+   border-width: 0.1em;
+   padding: 2em;
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 300;
+   font-size: 80%;
+   color: white;
+   text-shadow: 0.1em 0.1em rgba(162,162,162,255);
+ 
+}
+
+form input{
+   border-radius: 2%;
+   border: solid white 0.2em;
+   width:20vw;
+   margin:1em;
+}
+.presupuesto{
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 300;
+   font-size: 1em;
+   padding: 0.5em;
+
+}
+
+iframe{
+   margin: 2em;
+   grid-column-start: 2;
+   grid-column-end: 5;
+   width: 80vw;
+   height: 35vw;
+
+}
+
+ 
 /*query*/
 
 /* Tablets ----------- */
@@ -545,12 +603,12 @@ and (max-device-width: 999px) {
 
 .navbar button{
    box-shadow: rgba(0, 0, 0, 0.07) 0px 0.1em 0.1em, rgba(0, 0, 0, 0.10) 0px 0.2em 0.2em, rgba(0, 0, 0, 0.07) 0px 0.4em 0.4em, rgba(0, 0, 0, 0.07) 0px 0.8em 0.8em, rgba(0, 0, 0, 0.07) 0px 1.4em 1.4em;
-   font-size: clamp(0.7em, 3em, 1em);
+   font-size: 0.7em;
    border: none;
    text-shadow: 0.1em #000;
    text-align: center;
-   height: clamp(2em, 4em, 5em);
-   width: clamp(4em, 7em, 9em);
+   height: 1fr;
+   width: 80vw;
    font-family: 'Source Sans Pro';
    font-style: normal;
    font-weight: 500;
@@ -620,12 +678,10 @@ and (min-width : 1000px) {
    flex-direction: row;
    list-style: none;
    place-items: center;
-   gap: 0.5em;
+   
    
 }
-.Logo img{
-   scale:100%;
-}
+   
 
 .navbar button{
    box-shadow: rgba(0, 0, 0, 0.07) 0px 0.1em 0.1em, rgba(0, 0, 0, 0.10) 0px 0.2em 0.2em, rgba(0, 0, 0, 0.07) 0px 0.4em 0.4em, rgba(0, 0, 0, 0.07) 0px 0.8em 0.8em, rgba(0, 0, 0, 0.07) 0px 1.4em 1.4em;
@@ -638,8 +694,6 @@ and (min-width : 1000px) {
    font-family: 'Source Sans Pro';
    font-style: normal;
    font-weight: 500;
-   font-display: swap;
-   padding: clamp(0em, 0.1em, 1em);
    text-justify: newspaper;
    transition: 0.2s ease-in-out 0s;
 }
@@ -768,28 +822,24 @@ body {
 /* about */
 
 .Ceo{
-   width: 25vw;
+   width: 20vw;
    border: solid white 0.2em;
 }
 
 .Vice{
-   margin-top: 20em;
-   justify-self:left;
-   width: 25vw;
-   grid-column-start: 2;
+   width: 20vw;
    border: solid white 0.2em;
+   
 }
 
-.text2{
-   justify-self: flex-end;
-   scale: 80%;
-}
+
 
 .Location{
    margin-top: 20em;
 }
 .City{
-   margin-top: 40em;
+   
+   margin-top: 10em;
    width: 35vw;
    border-radius: 30%;
    max-width: 100%;
@@ -804,4 +854,14 @@ body {
    width: 30vw;
    margin-top: -4em;
 }
+.Caso h4{
+   font-size: 120%;
+   margin: 1em;
+
+}
+
+.Caso p{
+   font-size: 120%;
+}
+
 }

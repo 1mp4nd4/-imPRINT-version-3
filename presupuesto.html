@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@200;300;900&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet"> 
+    <!--/Fonts-->
+    
+    <title>imPRINT v3</title>
+    
+    <!-- Scripts -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://kit.fontawesome.com/552ae7b2fe.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="navLinks">
+            <li><a href="index.html"><img class="Logo" src="https://i.ibb.co/X8GhwNV/im-5.png" alt="logo"></a></li>
+            <li><button type="button" class="Link1"><i class="fas fa-cart-plus"></i></i>Presupuesto</li>
+            <a href="about.html"><li><button type="button" class="Link2"><i class="fas fa-people-carry"></i>Sobre Nosotros</li></a>
+            <a href="footprint.html"><li><button type="button" class="Link3"><i class="fas fa-leaf"></i> Huella Ambiental</li></a>
+        </ul>
+    </nav>
+    
+        <form class="presupuesto" action="" name="formulario" method="get">
+            <p>Nombre</p>
+            <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre:">
+            <br>
+            <p>Apellido</p>
+            <input type="text" name="apellido" id="apellido" maxlength="30" placeholder="Apellido:">
+            <br>
+            <p>Email</p>
+            <input type="email" id="email" name="email" placeholder="gomezmartin@xmail.com">
+            <br>
+            <p>Archivo STL(opcional)</p>
+            <input type="file">
+            <br>
+            <input type="submit" id="btn" name="btn" value="Enviar">
+        </form>
+        <script>
+            (function(){
+                //Variables
+                var formulario = document.getElementsByName('formulario')[0],
+                    elementos = formulario.elements,
+                    boton = document.getElementById('btn');
+    
+                var validarNombre = function(e){
+                    if (formulario.nombre.value == 0){
+                        alert("Completa el campo nombre");
+                        e.preventDefault();
+                    }
+                };
+    
+                var validarApellido = function(e){
+                    if (formulario.apellido.value == 0){
+                        alert("Completa el campo apellido");
+                        e.preventDefault();
+                    }
+                };
+               
+                var validarEmail = function(e){
+                    if (formulario.email.value == 0){
+                        alert("Completa el campo email");
+                        e.preventDefault();
+                    }
+                };
+    
+                var validar = function(e){
+                    validarNombre(e);
+                    validarEmail(e);
+                    validarApellido(e)
+                };
+                formulario.addEventListener("submit", validar);
+            }())
+        </script>
+       
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/pDq0RWQBHms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <div class="footer">
+        <a href="mainpage.com"><img class="Logo" src="https://i.ibb.co/X8GhwNV/im-5.png" alt="logo"></a>
+        <ul>
+            <li><a href="https://www.facebook.com/imPrint"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.facebook.com/imPrint"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/imPrint"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/imPrint"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </div>     
+</body>
+</html>
