@@ -412,7 +412,7 @@ body {
    width: 40vw;
    border-radius: 50%;
    overflow-y: scroll;
-
+   border: solid white 0.2em;
 }
 .text1{
    grid-area: text;
@@ -421,6 +421,7 @@ body {
    grid-area: vice;
    width: 40vw;
    border-radius: 50%;
+   border: solid white 0.2em;
 }
 .text2{
    grid-area: text2;
@@ -459,6 +460,7 @@ body {
    margin-top: 10em;
    width: 80vw;
    border-radius: 50%;
+   border: solid white 0.2em;
 }
 .text3{
    grid-area: text;
@@ -480,6 +482,7 @@ body {
    height:60vw;
    width: 60vw;
    border-radius: 50%;
+   border: solid white 0.2em;
 }
 .Caso h4{
    font-size: 80%;
@@ -766,6 +769,7 @@ body {
 
 .Ceo{
    width: 25vw;
+   border: solid white 0.2em;
 }
 
 .Vice{
@@ -773,7 +777,7 @@ body {
    justify-self:left;
    width: 25vw;
    grid-column-start: 2;
-   
+   border: solid white 0.2em;
 }
 
 .text2{
@@ -789,6 +793,7 @@ body {
    width: 35vw;
    border-radius: 30%;
    max-width: 100%;
+   border: solid white 0.2em; 
 }
 /* /about */
 
