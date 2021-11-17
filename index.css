@@ -17,6 +17,7 @@ body {
       "wwith wwith wwith wwith" 80vh
       "footer footer footer footer" 10vh 
       / 3fr 3fr 3fr 3fr;
+      background-color:  #dcdad7;
 }
 
 
@@ -84,7 +85,7 @@ body {
    height:auto;
 }
 
-.navbar button{
+.navbar button{ 
    box-shadow: rgba(0, 0, 0, 0.07) 0px 0.1em 0.1em, rgba(0, 0, 0, 0.10) 0px 0.2em 0.2em, rgba(0, 0, 0, 0.07) 0px 0.4em 0.4em, rgba(0, 0, 0, 0.07) 0px 0.8em 0.8em, rgba(0, 0, 0, 0.07) 0px 1.4em 1.4em;
    font-size: 0.7em;
    border: none;
