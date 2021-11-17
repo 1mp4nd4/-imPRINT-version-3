@@ -2,7 +2,7 @@
 
 html {
    font-family: 'Times New Roman', Times, serif;
-  
+   background-color:  #dcdad7;
 }
 
 
@@ -98,6 +98,7 @@ body {
    text-justify: newspaper;
    cursor: pointer;
    transition: 0.2s ease-in-out 0s;
+   background-color: #dcdad7;
 }
 
 .navbar button:hover{
